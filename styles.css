@@ -28,6 +28,10 @@ nav > a {
     font-size: 1.4rem;
 }
 
+nav a:hover{
+    background-color: #49505F;
+}
+
 /*Header*/
 header {
     background-image: url(/layout-01-assets/img11.jpg);
@@ -56,10 +60,50 @@ header > p {
 }
 
 /*First row of 3*/
-.row3 p {
-    width: 30%;
+section.first {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.row3 h3 {
-    color: green;
+figure.row {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    background-color: #F2F2F2;
+    width: 17.65vw;
+    margin: 5vw 1vw;
+}
+figure.row img {
+    width: 17.65vw;
+}
+
+figure.row a {
+    background-color: red;
+    align-self: center;
+    font-size: 1.5rem;
+    margin: 2vh 0;
+    padding: 0.5rem 2rem;
+    border-radius: .5rem;
+    max-width: 6.5vw;
+    text-align: center;
+}
+
+/*first row of 2*/
+
+figure.tworow {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    background-color: #F2F2F2;
+    width: 27.25vw;
+    margin: 5vw 1vw;
+}
+
+#columna {
+    margin-left: 20vw;
+}
+
+#columnb {
+    margin-right: 20vw;
 }
