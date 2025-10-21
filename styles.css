@@ -1,7 +1,65 @@
 body {
     margin:0;
+    font-family: Calibri;
+    /* note later: figure out how to implement "open sans" font*/
 }
 
+@font-face {
+    font-family: 'Custom';
+    src: url(/Open_Sans/OFL.txt) format('txt');
+}
+
+a {
+    text-decoration: none;
+    color: #F3F4F5;
+}
+
+/* Navigation bar*/
 nav {
     background-color: #383E4C;
+    display: flex;
+    justify-content: center;
+}
+
+nav > a {
+    padding: 0.5rem 1rem;
+    border: 1px solid #596170;
+    margin: 0.75rem 0.5rem;
+    font-size: 1.4rem;
+}
+
+/*Header*/
+header {
+    background-image: url(/layout-01-assets/img11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+h1 {
+    margin-block-end: 0;
+    margin-block-start: 20vh;
+    font-weight: lighter;
+    font-size: 5rem;
+    text-shadow: 2px 2px 1px black;
+}
+
+header > p {
+    margin-block-start: 0;
+    font-weight: lighter;
+    font-size: 2rem;
+    margin-block-end: 27vh;
+}
+
+/*First row of 3*/
+.row3 p {
+    width: 30%;
+}
+
+.row3 h3 {
+    color: green;
 }
