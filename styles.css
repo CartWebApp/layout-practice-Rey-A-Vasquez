@@ -1,7 +1,7 @@
 body {
     margin:0;
     font-family: Calibri;
-    /* note later: figure out how to implement "open sans" font*/
+    /* note later: figure out how to implement "open sans" or "source sans" font*/
 }
 
 @font-face {
@@ -52,11 +52,12 @@ h1 {
     text-shadow: 2px 2px 1px black;
 }
 
-header > p {
+header.main > p {
     margin-block-start: 0;
     font-weight: lighter;
     font-size: 2rem;
-    margin-block-end: 27vh;
+    padding:  0 0 27vh 0;
+    margin-block-end: 0;
 }
 
 figure p {
@@ -100,6 +101,18 @@ figure.row a {
     border-radius: .5rem;
     max-width: 6.5vw;
     text-align: center;
+}
+
+#green h3 {
+    color: #178A27;
+}
+
+#green a {
+    background-color: #178A27;
+}
+
+#blue h3 {
+    color: #1686C1;
 }
 
 /*first row of 2*/
@@ -152,6 +165,20 @@ header.two {
     background-size: cover;
     background-position: center;
     width: 100vw;
+    margin: 5vw 0 0 0;
+}
+
+.two h2 {
+    margin-top: 5vw;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-block-end: 0;
+}
+
+.two p {
+    width: 35vw;
+    margin-bottom: 5vw;
+    font-size: larger;
 }
 
 section.second {
@@ -166,20 +193,32 @@ figure.threerow {
     align-items:flex-start;
     background-color: #F2F2F2;
     width: 12.75vw;
-    margin: 5vw 1vw;
+    margin: 5vw 1vw 1vw 1vw;
 }
 
 figure.threerow img {
     width: 12.75vw;
 }
 
+figure.threerow a {
+    color: #666666;
+    background-color: white;
+    border: 1px solid #CDCDCD;
+    border-radius: .5rem;
+    align-self: center;
+    padding: 1vh 1.5vw;
+    font-size: x-large;
+    margin: 2vh 0;
+    
+}
+
 #big {
     background-color: #F2F2F2;
-    width: 55.85vw;
+    width: 57vw;
 }
 
 #big img{
-    width: 55.85vw;
+    width: 57vw;
 }
 
 /*Footer work*/
