@@ -1,8 +1,11 @@
 body {
     margin:0;
     font-family: Open Sans;
-    /* note later: figure out how to implement "open sans" or "source sans" font*/
 }
+
+/*NOTE: I had started this project thinking I couldn't use divs, and when I found out I could...
+It was already too late. By that I mean 1 day before the project was due. That is why you'll see 
+I increased the padding on the sides of some figures in order for them to create a new row. ;(*/
 
 a {
     text-decoration: none;
@@ -20,7 +23,7 @@ nav > a {
     padding: 0.5rem 1rem;
     border: 1px solid #596170;
     margin: 0.75rem 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 
 nav a:hover{
@@ -33,7 +36,7 @@ nav a:hover{
     background-color: white;
     border: 1px solid #dbdbdb;
     border-radius: .5rem;
-    font-size: x-large;
+    font-size: larger;
     padding: 1vh 1.5vw;
 }
 
@@ -52,23 +55,22 @@ header {
 h1 {
     margin-block-end: 0;
     margin-block-start: 20vh;
-    font-weight: lighter;
-    font-size: 5rem;
+    font-weight: 400;
+    font-size: 4rem;
     text-shadow: 2px 2px 1px black;
 }
 
 header.main > p {
     margin-block-start: 0;
     font-weight: lighter;
-    font-size: 2rem;
-    padding:  0 0 27vh 0;
+    font-size: 1.45rem;
+    padding:  0 0 28vh 0;
     margin-block-end: 0;
 }
 
 figure p {
     margin: 0.5vw 1vw;
     color: #565656;
-    font-size:larger;
 }
 
 figure h3 {
@@ -161,16 +163,17 @@ figure.tworow h3 {
     padding: 0.5rem 1.5rem;
     margin: 0.5vw 4vw 3vh 0;
 }
-/*second section*/
+/*second section: Our services*/
 header.two {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     color: white;
     background-image: url(/layout-01-assets/img13.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     width: 100vw;
     margin: 5vw 0 0 0;
 }
@@ -180,12 +183,12 @@ header.two {
     font-size: 2.5rem;
     font-weight: lighter;
     margin-block-end: 0;
+    text-shadow: 1px 2px 1px #AAAAAA;
 }
 
 .two p {
-    width: 35vw;
-    margin-bottom: 5vw;
-    font-size: larger;
+    width: 40vw;
+    margin-bottom: 4vw;
 }
 
 section.second {
@@ -194,7 +197,7 @@ section.second {
     justify-content: center;
 }
 
-/*Third row of content*/
+/*Third row of content/the row of four*/
 figure.threerow {
     display: flex;
     flex-direction: column;
@@ -209,6 +212,7 @@ figure.threerow a {
     margin: 2vh 0;  
 }
 
+/*ONE BIG COLUMN!!!!!!!*/
 figure.threerow img {
     width: 12.75vw;
 }
@@ -223,22 +227,18 @@ figure.threerow img {
 
 #big img{
     width: 57vw;
+    margin-bottom: 6vh;
 }
 
-/*content form*/
-.contact {
-    display: flex;
+#big h3, #big p {
+    margin: 1vh 2vw 1vh 2vw;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 20vh;
-    justify-content: space-around;
+#big a {
+    margin: 2vh 0 4vh 2vw;
 }
 
-/*Footer work*/
+/*contact form*/
 section.contact {
     display: flex;
     flex-direction: column;
@@ -246,13 +246,98 @@ section.contact {
     background-image: url(layout-01-assets/img14.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
 }
 
+.contact h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    text-shadow: 1px 2px 1px #333333;
+    margin-bottom: 1.5vh;
+    margin-top: 10vh;
+
+}
+
+.contact p {
+    width: 30vw;
+    background-color: rgba(255, 255, 255, 0.486);
+    border-radius: 0.2rem;
+    text-align: center;
+    padding: 3vh 2.5vw;
+    font-size: 0.9rem;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 11vh;
+}
+
+.form-row {
+    font-family: Open Sans;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 18vh;
+    width: 17vw;
+    margin-right: 1vw;
+}
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 26vh;
+    width: 17vw;
+}
+
+input, textarea {
+    font-family: Open Sans;
+    background-color: rgba(255, 255, 255, 0.486);
+    border: 0;
+    border-radius: 0.2rem;
+}
+
+textarea {
+    height: 17.5vh
+}
+
+input {
+    height: 4.5vh;
+}
+
+input::placeholder, textarea::placeholder {
+    color: black;
+    padding-left: 1rem;
+}
+
+textarea::placeholder {
+    padding-top: .25rem;
+    font-size: 0.8rem;
+}
+
+[value="Send"] {
+    width: 5.5vw;
+    height: 6vh;
+    font-size: 1vw;
+    background-color: #262628;
+    color: white;
+    border: 1px solid #CCCCCC;
+    border-radius: .5rem;
+}
+
+/*Footer work*/
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+footer h3, footer p {
+    font-style: italic;
 }
 
 footer a {
